@@ -22,15 +22,16 @@ disney-clone/
 
 ## 🚀 Installation
 
-### 1. Clone Repository
+## 1. Clone Repository
 
 ```bash
 git clone https://github.com/your-username/disney-clone.git
 cd disney-clone
 
+```
 ---
 
-# 2. Backend Setup (/server)
+## 2. Backend Setup (/server)
 
 ```bash
 cd server
@@ -41,7 +42,6 @@ npm install
 Create .env file in /server:
 
 ```env
-
 
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/disney-clone
@@ -61,7 +61,7 @@ Backend runs at: http://localhost:5000
 
 ---
 
-# 3. Frontend Setup (/client)
+## 3. Frontend Setup (/client)
 
 ```bash
 cd client
