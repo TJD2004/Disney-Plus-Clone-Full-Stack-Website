@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: ['http://localhost:5173','https://disney-plus-clone-full-stack-websit.vercel.app/'],
   credentials: true
 }));
 app.use(express.json());
@@ -40,9 +40,6 @@ mongoose.connect(process.env.MONGODB_URI)
     console.error('❌ MongoDB Atlas connection error:', error);
   });
 
-app.listen(PORT, ()=> {
-    console.log(`Server is running on port ${PORT}`);
-});
 
 
 export default app;
