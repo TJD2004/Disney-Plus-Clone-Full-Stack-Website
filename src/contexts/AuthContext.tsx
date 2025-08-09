@@ -27,7 +27,7 @@ export const useAuth = () => {
   return context;
 };
 
-const API_URL = 'https://disney-plus-clone-full-stack-websit.vercel.app/api';
+const API_URL = 'https://disney-plus-clone-full-stack-websit.vercel.app:5000/api';
 
 // Configure axios defaults
 axios.defaults.baseURL = API_URL;
