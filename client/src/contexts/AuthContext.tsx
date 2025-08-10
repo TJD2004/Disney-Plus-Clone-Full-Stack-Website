@@ -27,7 +27,7 @@ export const useAuth = () => {
   return context;
 };
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://disney-plus-clone-backend.onrender.com/api';
 
 // Configure axios defaults
 axios.defaults.baseURL = API_URL;
