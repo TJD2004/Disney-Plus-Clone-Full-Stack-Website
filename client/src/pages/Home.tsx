@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AuthContext';
+import { Link, useNavigate } from 'react-router-dom';
 
 import img1 from '../images/Mandalorian.jpg';
 import img2 from '../images/Loki.jpg';
@@ -210,18 +211,18 @@ const Home: React.FC = () => {
                         <div className="space-y-4">
                           <p className="text-sm sm:text-lg text-gray-300">Join millions of viewers streaming their favorites</p>
                           <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-                            <a 
-                              href="/register"
+                            <Link
+                              to="/register"
                               className="group bg-blue-600 hover:bg-blue-700 text-white px-4 sm:px-8 py-2 sm:py-4 rounded-lg text-sm sm:text-lg font-semibold transition-all duration-300 text-center transform hover:scale-105 shadow-lg hover:shadow-xl"
                             >
                               Start Free Trial
-                            </a>
-                            <a 
-                              href="/login"
+                            </Link>
+                            <Link 
+                              to="/login"
                               className="group bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 text-white px-4 sm:px-8 py-2 sm:py-4 rounded-lg text-sm sm:text-lg font-semibold transition-all duration-300 text-center transform hover:scale-105"
                             >
                               Sign In
-                            </a>
+                            </Link>
                           </div>
                         </div>
                       )}
