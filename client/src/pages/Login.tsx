@@ -153,7 +153,7 @@ const Login: React.FC = () => {
                 </div>
               </div>
               <div className="mt-4 sm:mt-6">
-                <GoogleLoginButton />
+                <GoogleLoginButton  loading={loading} setLoading={setLoading}/>
               </div>
             </div>
 

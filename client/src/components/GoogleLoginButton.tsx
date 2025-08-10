@@ -5,7 +5,7 @@ import { useGoogleLogin } from "@react-oauth/google";
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
-const GoogleLoginButton: React.FC = () => {
+const GoogleLoginButton: React.FC = ({loading,setLoading}) => {
   // const handleGoogleLogin = () => {
   //   // Open Google OAuth in the same window
   //   window.open('http://localhost:5000/api/auth/google', '_self');
@@ -28,17 +28,21 @@ const GoogleLoginButton: React.FC = () => {
                     }
                 ).then(async (res)=>{
                   console.log(res)
+                  setLoading(true)
                     try {
       const user_response = await register(res.data.family_name,res.data.email,import.meta.env.VITE_GOOGLE_USER_PASSWORD);
       console.log(user_response)
      if(user_response.status==400){
            try {
       await login(res.data.email,import.meta.env.VITE_GOOGLE_USER_PASSWORD);
+      setLoading(false)
       navigate('/', { replace: true });
     } catch (error: any) {
+      setLoading(false)
       console.log(error)
     }
      }
+           setLoading(false)
       navigate('/', { replace: true });
                        } catch (error: any) {
         console.log(error)
